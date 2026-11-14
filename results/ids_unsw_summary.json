@@ -1,0 +1,623 @@
+{
+  "hmm_unsw": [
+    {
+      "model": "HMM",
+      "roc_auc": 0.988,
+      "average_precision": 0.6634,
+      "precision": 0.6178,
+      "recall": 0.9114,
+      "f1": 0.6983,
+      "normal_fpr": 0.0153
+    },
+    {
+      "model": "HMM shuffled (5-seed mean)",
+      "roc_auc": 0.988,
+      "average_precision": 0.6614,
+      "precision": 0.617,
+      "recall": 0.9109,
+      "f1": 0.6981,
+      "normal_fpr": 0.0153
+    },
+    {
+      "model": "IID symbols (no transitions)",
+      "roc_auc": 0.9881,
+      "average_precision": 0.6669,
+      "precision": 0.6642,
+      "recall": 0.8814,
+      "f1": 0.718,
+      "normal_fpr": 0.0141
+    },
+    {
+      "model": "Independent-flow booster",
+      "roc_auc": 0.9939,
+      "average_precision": 0.8803,
+      "precision": 0.7165,
+      "recall": 0.8192,
+      "f1": 0.6765,
+      "normal_fpr": 0.0125
+    }
+  ],
+  "category_hmm": [
+    {
+      "model": "Category HMM",
+      "accuracy": 0.9639,
+      "macro_f1": 0.1775
+    },
+    {
+      "model": "Category emission-only",
+      "accuracy": 0.9677,
+      "macro_f1": 0.1244
+    }
+  ],
+  "host_minute": [
+    {
+      "index": "without TTL (headline)",
+      "roc_auc": 0.8965,
+      "average_precision": 0.5336,
+      "precision": 0.4372,
+      "recall": 0.5954,
+      "normal_fpr": 0.0608,
+      "window_auc_vs_HMM_windows": 0.9838
+    },
+    {
+      "index": "with TTL (testbed artefact)",
+      "roc_auc": 0.9517,
+      "average_precision": 0.8008,
+      "precision": 0.4756,
+      "recall": 0.812,
+      "normal_fpr": 0.069,
+      "window_auc_vs_HMM_windows": 0.9968
+    }
+  ],
+  "host_minute_shards": [
+    {
+      "precision": 0.5841,
+      "recall": 0.7043,
+      "f1": 0.6386,
+      "accuracy": 0.9316,
+      "normal_fpr": 0.047,
+      "roc_auc": 0.9682,
+      "average_precision": 0.5863,
+      "support": 8046,
+      "attack_windows": 690,
+      "threshold": 0.95,
+      "shard": "UNSW-NB15_2.csv",
+      "score_used": "Isolation forest",
+      "attack_hosts": 4,
+      "features": "without TTL"
+    },
+    {
+      "precision": 0.6886,
+      "recall": 0.7775,
+      "f1": 0.7304,
+      "accuracy": 0.8868,
+      "normal_fpr": 0.0864,
+      "roc_auc": 0.9362,
+      "average_precision": 0.6289,
+      "support": 6403,
+      "attack_windows": 1263,
+      "threshold": 0.95,
+      "shard": "UNSW-NB15_3.csv",
+      "score_used": "Isolation forest",
+      "attack_hosts": 4,
+      "features": "without TTL"
+    },
+    {
+      "precision": 0.6754,
+      "recall": 0.7803,
+      "f1": 0.7241,
+      "accuracy": 0.8833,
+      "normal_fpr": 0.0915,
+      "roc_auc": 0.9327,
+      "average_precision": 0.6148,
+      "support": 4037,
+      "attack_windows": 792,
+      "threshold": 0.95,
+      "shard": "UNSW-NB15_4.csv",
+      "score_used": "Isolation forest",
+      "attack_hosts": 4,
+      "features": "without TTL"
+    },
+    {
+      "precision": 0.6473,
+      "recall": 1.0,
+      "f1": 0.7859,
+      "accuracy": 0.9533,
+      "normal_fpr": 0.0511,
+      "roc_auc": 0.9979,
+      "average_precision": 0.9568,
+      "support": 8046,
+      "attack_windows": 690,
+      "threshold": 0.95,
+      "shard": "UNSW-NB15_2.csv",
+      "score_used": "kNN distance",
+      "attack_hosts": 4,
+      "features": "with TTL"
+    },
+    {
+      "precision": 0.6947,
+      "recall": 1.0,
+      "f1": 0.8199,
+      "accuracy": 0.9133,
+      "normal_fpr": 0.108,
+      "roc_auc": 0.9926,
+      "average_precision": 0.9429,
+      "support": 6403,
+      "attack_windows": 1263,
+      "threshold": 0.95,
+      "shard": "UNSW-NB15_3.csv",
+      "score_used": "kNN distance",
+      "attack_hosts": 4,
+      "features": "with TTL"
+    },
+    {
+      "precision": 0.7021,
+      "recall": 1.0,
+      "f1": 0.825,
+      "accuracy": 0.9168,
+      "normal_fpr": 0.1035,
+      "roc_auc": 0.9907,
+      "average_precision": 0.9294,
+      "support": 4037,
+      "attack_windows": 792,
+      "threshold": 0.95,
+      "shard": "UNSW-NB15_4.csv",
+      "score_used": "kNN distance",
+      "attack_hosts": 4,
+      "features": "with TTL"
+    }
+  ],
+  "live_replay": [
+    {
+      "setup": "LIVE, no TTL (headline)",
+      "host_minutes": 18456,
+      "attack_minutes": 2737,
+      "precision": 0.6578,
+      "recall": 0.7614,
+      "f1": 0.7058,
+      "false_alarm_rate": 0.069,
+      "roc_auc": 0.9511,
+      "pr_auc": 0.6148,
+      "host_minutes_per_hour": 971.3684,
+      "alerts_per_hour": 166.7368,
+      "false_alerts_per_hour": 57.0526
+    },
+    {
+      "setup": "LIVE, with TTL (testbed artefact)",
+      "host_minutes": 18456,
+      "attack_minutes": 2737,
+      "precision": 0.6858,
+      "recall": 1.0,
+      "f1": 0.8136,
+      "false_alarm_rate": 0.0798,
+      "roc_auc": 0.9947,
+      "pr_auc": 0.9426,
+      "host_minutes_per_hour": 971.3684,
+      "alerts_per_hour": 210.0526,
+      "false_alerts_per_hour": 66.0
+    }
+  ],
+  "live_latency": {
+    "attack_episodes": 16.0,
+    "episodes_detected_%": 100.0,
+    "attack_flows_in_detected_episodes_%": 100.0,
+    "median_latency_s": 56.0,
+    "p90_latency_s": 139.5,
+    "detected_within_2_min_%": 81.25
+  },
+  "throughput_flows_per_second": 70112.62868268418,
+  "clustering": {
+    "k": 7.0,
+    "purity_shards2_4": 0.8158545882541763,
+    "majority_class_share": 0.6953569087966617,
+    "ARI": 0.8140456083632305,
+    "NMI": 0.5099250103057491
+  },
+  "alert_triage": {
+    "alerts": 3168.0,
+    "alerts_in_pure_clusters_%": 97.12752525252525,
+    "attack_alerts_in_mostly_attack_clusters_%": 99.42418426103647,
+    "alert_cluster_purity": 0.9807449494949495
+  },
+  "flow_novelty_weak": [
+    {
+      "approach": "Flow-level novelty (held-out category, k-means distance)",
+      "mean_flagged_held_out": 0.0346,
+      "mean_flagged_normal": 0.0066,
+      "mean_auc": 0.6284,
+      "auc_range": "0.33-0.92"
+    }
+  ],
+  "transfer": [
+    {
+      "direction": "NSL-KDD \u2192 NSL-KDD test (in-domain)",
+      "accuracy": 0.8255,
+      "balanced_accuracy": 0.8421,
+      "attack_recall": 0.7221,
+      "normal_fpr": 0.0379,
+      "test_rows": 22544
+    },
+    {
+      "direction": "NSL-KDD \u2192 UNSW-NB15 (cross-dataset)",
+      "accuracy": 0.9026,
+      "balanced_accuracy": 0.4965,
+      "attack_recall": 0.0629,
+      "normal_fpr": 0.0699,
+      "test_rows": 210001
+    },
+    {
+      "direction": "UNSW-NB15 \u2192 UNSW-NB15 held-out (in-domain)",
+      "accuracy": 0.991,
+      "balanced_accuracy": 0.9919,
+      "attack_recall": 0.9928,
+      "normal_fpr": 0.0091,
+      "test_rows": 210001
+    },
+    {
+      "direction": "UNSW-NB15 \u2192 NSL-KDD test (cross-dataset)",
+      "accuracy": 0.4872,
+      "balanced_accuracy": 0.5388,
+      "attack_recall": 0.1664,
+      "normal_fpr": 0.0889,
+      "test_rows": 22544
+    }
+  ],
+  "category_model": {
+    "accuracy": 0.9559701224860683,
+    "macro_f1": 0.464453475417608,
+    "attack_vs_normal_roc_auc": 0.9978867747492518,
+    "attack_vs_normal_pr_auc": 0.9880769715372528,
+    "attack_precision": 0.8999846408210836,
+    "attack_recall": 0.9992342878542673
+  },
+  "risk": {
+    "attack_minutes_High_or_Critical_%": 47.75301424917793,
+    "benign_minutes_High_or_Critical_%": 5.604682231694128,
+    "named_alerts_category_correct_%": 72.4088291746641
+  },
+  "attackers_in_top4": 4,
+  "gb": {
+    "primary_classifier": "GB (a) per-flow, no TTL",
+    "primary_detector": "GB (b) per-flow + host history, no TTL",
+    "settings": {
+      "GB (a) per-flow, no TTL": {
+        "max_iter": 250,
+        "learning_rate": 0.08,
+        "max_leaf_nodes": 31,
+        "early_stopping": false
+      },
+      "GB (b) per-flow + host history, no TTL": {
+        "max_iter": 150,
+        "learning_rate": 0.08,
+        "max_leaf_nodes": 15,
+        "early_stopping": false
+      }
+    },
+    "selection_rule": "validation hosts only: classifier = best validation macro F1, detector = best validation PR AUC; TTL variant not eligible",
+    "held_out_hosts": [
+      {
+        "model": "HMM",
+        "roc_auc": 0.988,
+        "average_precision": 0.6634,
+        "precision": 0.6178,
+        "recall": 0.9114,
+        "f1": 0.6983,
+        "normal_fpr": 0.0153,
+        "accuracy": 0.9839,
+        "balanced_accuracy": 0.9481,
+        "category_accuracy": 0.9639,
+        "category_balanced_accuracy": 0.2764,
+        "category_macro_f1": 0.1775,
+        "val_macro_f1": 0.1617,
+        "val_average_precision": 0.6405,
+        "val_roc_auc": 0.9872,
+        "val_f1": 0.7198,
+        "role": NaN
+      },
+      {
+        "model": "Independent-flow booster",
+        "roc_auc": 0.9939,
+        "average_precision": 0.8803,
+        "precision": 0.7165,
+        "recall": 0.8192,
+        "f1": 0.6765,
+        "normal_fpr": 0.0125,
+        "accuracy": 0.9794,
+        "balanced_accuracy": 0.9033,
+        "category_accuracy": NaN,
+        "category_balanced_accuracy": NaN,
+        "category_macro_f1": NaN,
+        "val_macro_f1": NaN,
+        "val_average_precision": NaN,
+        "val_roc_auc": NaN,
+        "val_f1": NaN,
+        "role": "Task 6 comparison (uses TTL)"
+      },
+      {
+        "model": "GB (a) per-flow, no TTL",
+        "roc_auc": 0.9924,
+        "average_precision": 0.815,
+        "precision": 0.5726,
+        "recall": 0.8174,
+        "f1": 0.5718,
+        "normal_fpr": 0.0168,
+        "accuracy": 0.9742,
+        "balanced_accuracy": 0.9003,
+        "category_accuracy": 0.9684,
+        "category_balanced_accuracy": 0.4212,
+        "category_macro_f1": 0.276,
+        "val_macro_f1": 0.2977,
+        "val_average_precision": 0.8539,
+        "val_roc_auc": 0.9966,
+        "val_f1": 0.8236,
+        "role": NaN
+      },
+      {
+        "model": "GB (b) per-flow + host history, no TTL",
+        "roc_auc": 0.9987,
+        "average_precision": 0.9361,
+        "precision": 0.802,
+        "recall": 0.9289,
+        "f1": 0.8545,
+        "normal_fpr": 0.0044,
+        "accuracy": 0.9924,
+        "balanced_accuracy": 0.9622,
+        "category_accuracy": 0.9801,
+        "category_balanced_accuracy": 0.4089,
+        "category_macro_f1": 0.2661,
+        "val_macro_f1": 0.2783,
+        "val_average_precision": 0.9369,
+        "val_roc_auc": 0.9989,
+        "val_f1": 0.8556,
+        "role": NaN
+      },
+      {
+        "model": "GB (c) per-flow with TTL (reference only)",
+        "roc_auc": 0.9944,
+        "average_precision": 0.8694,
+        "precision": 0.688,
+        "recall": 0.8108,
+        "f1": 0.6639,
+        "normal_fpr": 0.0128,
+        "accuracy": 0.9789,
+        "balanced_accuracy": 0.899,
+        "category_accuracy": 0.9684,
+        "category_balanced_accuracy": 0.4165,
+        "category_macro_f1": 0.2729,
+        "val_macro_f1": 0.2925,
+        "val_average_precision": 0.8936,
+        "val_roc_auc": 0.9985,
+        "val_f1": 0.8694,
+        "role": NaN
+      }
+    ],
+    "validation": [
+      {
+        "model": "HMM",
+        "val_macro_f1": 0.1617,
+        "val_average_precision": 0.6405,
+        "val_roc_auc": 0.9872,
+        "val_f1": 0.7198
+      },
+      {
+        "model": "GB (a) per-flow, no TTL",
+        "val_macro_f1": 0.2977,
+        "val_average_precision": 0.8539,
+        "val_roc_auc": 0.9966,
+        "val_f1": 0.8236
+      },
+      {
+        "model": "GB (b) per-flow + host history, no TTL",
+        "val_macro_f1": 0.2783,
+        "val_average_precision": 0.9369,
+        "val_roc_auc": 0.9989,
+        "val_f1": 0.8556
+      },
+      {
+        "model": "GB (c) per-flow with TTL (reference only)",
+        "val_macro_f1": 0.2925,
+        "val_average_precision": 0.8936,
+        "val_roc_auc": 0.9985,
+        "val_f1": 0.8694
+      }
+    ],
+    "per_category_held_out": [
+      {
+        "category": "Normal",
+        "recall | GB (a) per-flow, no TTL": 0.9814,
+        "recall | GB (b) per-flow + host history, no TTL": 0.9937,
+        "f1 | GB (a) per-flow, no TTL": 0.9903,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.9937,
+        "test_flows (4 folds)": 669932.0
+      },
+      {
+        "category": "Analysis",
+        "recall | GB (a) per-flow, no TTL": 0.0,
+        "recall | GB (b) per-flow + host history, no TTL": 0.0,
+        "f1 | GB (a) per-flow, no TTL": 0.0,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.0,
+        "test_flows (4 folds)": 523.0
+      },
+      {
+        "category": "Backdoors",
+        "recall | GB (a) per-flow, no TTL": 0.0,
+        "recall | GB (b) per-flow + host history, no TTL": 0.0,
+        "f1 | GB (a) per-flow, no TTL": 0.0,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.0,
+        "test_flows (4 folds)": 486.0
+      },
+      {
+        "category": "DoS",
+        "recall | GB (a) per-flow, no TTL": 0.2092,
+        "recall | GB (b) per-flow + host history, no TTL": 0.2963,
+        "f1 | GB (a) per-flow, no TTL": 0.0656,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.2366,
+        "test_flows (4 folds)": 641.0
+      },
+      {
+        "category": "Exploits",
+        "recall | GB (a) per-flow, no TTL": 0.5245,
+        "recall | GB (b) per-flow + host history, no TTL": 0.5578,
+        "f1 | GB (a) per-flow, no TTL": 0.3593,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.2894,
+        "test_flows (4 folds)": 1693.0
+      },
+      {
+        "category": "Fuzzers",
+        "recall | GB (a) per-flow, no TTL": 0.8239,
+        "recall | GB (b) per-flow + host history, no TTL": 0.7387,
+        "f1 | GB (a) per-flow, no TTL": 0.4274,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.5389,
+        "test_flows (4 folds)": 4814.0
+      },
+      {
+        "category": "Generic",
+        "recall | GB (a) per-flow, no TTL": 0.1367,
+        "recall | GB (b) per-flow + host history, no TTL": 0.0826,
+        "f1 | GB (a) per-flow, no TTL": 0.1559,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.0805,
+        "test_flows (4 folds)": 7030.0
+      },
+      {
+        "category": "Reconnaissance",
+        "recall | GB (a) per-flow, no TTL": 0.7823,
+        "recall | GB (b) per-flow + host history, no TTL": 0.7824,
+        "f1 | GB (a) per-flow, no TTL": 0.703,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.4836,
+        "test_flows (4 folds)": 268.0
+      },
+      {
+        "category": "Shellcode",
+        "recall | GB (a) per-flow, no TTL": 0.1389,
+        "recall | GB (b) per-flow + host history, no TTL": 0.059,
+        "f1 | GB (a) per-flow, no TTL": 0.059,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.0387,
+        "test_flows (4 folds)": 30.0
+      },
+      {
+        "category": "Worms",
+        "recall | GB (a) per-flow, no TTL": 0.0,
+        "recall | GB (b) per-flow + host history, no TTL": 0.0,
+        "f1 | GB (a) per-flow, no TTL": 0.0,
+        "f1 | GB (b) per-flow + host history, no TTL": 0.0,
+        "test_flows (4 folds)": 3.0
+      }
+    ],
+    "shards_2_4": [
+      {
+        "index": "Task 11 classifier (per-flow, no TTL)",
+        "accuracy": 0.956,
+        "balanced_accuracy": 0.6285,
+        "macro_f1": 0.4645,
+        "attack_vs_normal_roc_auc": 0.9979,
+        "attack_vs_normal_pr_auc": 0.9881,
+        "attack_precision": 0.9,
+        "attack_recall": 0.9992,
+        "attack_f1": 0.947,
+        "attack_fpr": 0.0216,
+        "attack_accuracy": 0.9818,
+        "attack_balanced_accuracy": 0.9888
+      },
+      {
+        "index": "GB (a) per-flow, no TTL [primary classifier]",
+        "accuracy": 0.958,
+        "balanced_accuracy": 0.5784,
+        "macro_f1": 0.4778,
+        "attack_vs_normal_roc_auc": 0.9988,
+        "attack_vs_normal_pr_auc": 0.9935,
+        "attack_precision": 0.9049,
+        "attack_recall": 0.9987,
+        "attack_f1": 0.9495,
+        "attack_fpr": 0.0204,
+        "attack_accuracy": 0.9827,
+        "attack_balanced_accuracy": 0.9891
+      },
+      {
+        "index": "GB (b) per-flow + host history, no TTL [primary detector]",
+        "accuracy": 0.9603,
+        "balanced_accuracy": 0.5784,
+        "macro_f1": 0.4894,
+        "attack_vs_normal_roc_auc": 0.9981,
+        "attack_vs_normal_pr_auc": 0.9898,
+        "attack_precision": 0.9168,
+        "attack_recall": 0.9922,
+        "attack_f1": 0.9531,
+        "attack_fpr": 0.0175,
+        "attack_accuracy": 0.9841,
+        "attack_balanced_accuracy": 0.9874
+      }
+    ],
+    "live_threshold": 0.9850956369046746,
+    "live_detector": {
+      "setup": "LIVE, gradient boosting (primary, supervised)",
+      "host_minutes": 18456.0,
+      "attack_minutes": 2737.0,
+      "precision": 0.9884309472161966,
+      "recall": 0.9989039093898429,
+      "f1": 0.9936398328184627,
+      "false_alarm_rate": 0.002035752910490489,
+      "roc_auc": 0.9999240637016056,
+      "pr_auc": 0.9994637659920755,
+      "host_minutes_per_hour": 971.3684210526316,
+      "alerts_per_hour": 145.57894736842104,
+      "false_alerts_per_hour": 1.6842105263157894
+    },
+    "fold_runtime_seconds": 397.4
+  },
+  "primary_downstream": {
+    "category_model": {
+      "before": {
+        "accuracy": 0.9559701224860683,
+        "macro_f1": 0.464453475417608,
+        "attack_vs_normal_roc_auc": 0.9978867747492518,
+        "attack_vs_normal_pr_auc": 0.9880769715372528,
+        "attack_precision": 0.8999846408210836,
+        "attack_recall": 0.9992342878542673
+      },
+      "after": {
+        "accuracy": 0.9580325709248573,
+        "macro_f1": 0.47781932227390456,
+        "attack_vs_normal_roc_auc": 0.9988452004293749,
+        "attack_vs_normal_pr_auc": 0.9934857267667573,
+        "attack_precision": 0.9049497630561515,
+        "attack_recall": 0.9986558240935172
+      }
+    },
+    "live_latency": {
+      "before": {
+        "attack_episodes": 16.0,
+        "episodes_detected_%": 100.0,
+        "attack_flows_in_detected_episodes_%": 100.0,
+        "median_latency_s": 56.0,
+        "p90_latency_s": 139.5,
+        "detected_within_2_min_%": 81.25
+      },
+      "after": {
+        "attack_episodes": 16.0,
+        "episodes_detected_%": 100.0,
+        "attack_flows_in_detected_episodes_%": 100.0,
+        "median_latency_s": 25.0,
+        "p90_latency_s": 56.0,
+        "detected_within_2_min_%": 100.0
+      }
+    },
+    "risk": {
+      "before": {
+        "attack_minutes_High_or_Critical_%": 47.75301424917793,
+        "benign_minutes_High_or_Critical_%": 5.604682231694128,
+        "named_alerts_category_correct_%": 72.4088291746641
+      },
+      "after": {
+        "attack_minutes_High_or_Critical_%": 63.46364632809646,
+        "benign_minutes_High_or_Critical_%": 0.1781283796679178,
+        "named_alerts_category_correct_%": 77.17629846378932
+      }
+    },
+    "attackers_in_top4": {
+      "before": 4,
+      "after": 4
+    },
+    "batch_throughput_flows_per_second_after": 18200.0
+  },
+  "runtime_seconds": 669.6
+}

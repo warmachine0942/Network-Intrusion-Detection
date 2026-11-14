@@ -1,0 +1,232 @@
+{
+  "selected_classifier": "Gradient boosting (class-weighted)",
+  "service_target_encoding_used": false,
+  "primary_mode": "Classifier alone",
+  "second_stage": "v2",
+  "second_stage_threshold": 0.03685613794986801,
+  "u2r_share_cutoff": 0.95,
+  "anomaly_score": "kNN distance",
+  "naming_cutoff": 0.3,
+  "chosen_k": 5,
+  "final_table": [
+    {
+      "model": "Repo: tuned RF + hierarchical RF",
+      "accuracy": 0.7968,
+      "macro_f1": 0.5959,
+      "weighted_f1": 0.7617,
+      "macro_precision": 0.8322,
+      "attack_precision": 0.9688,
+      "attack_detection": 0.6954,
+      "normal_fpr": 0.0296,
+      "unseen_detection": 0.472,
+      "R2L_recall": 0.1036,
+      "U2R_recall": 0.1642,
+      "roc_auc": 0.9618,
+      "pr_auc": 0.9654
+    },
+    {
+      "model": "Repo: XGBoost multiclass",
+      "accuracy": 0.7802,
+      "macro_f1": 0.5541,
+      "weighted_f1": 0.743,
+      "macro_precision": 0.8168,
+      "attack_precision": 0.9687,
+      "attack_detection": 0.6603,
+      "normal_fpr": 0.0282,
+      "unseen_detection": 0.3675,
+      "R2L_recall": 0.086,
+      "U2R_recall": 0.1045,
+      "roc_auc": 0.9686,
+      "pr_auc": 0.9706
+    },
+    {
+      "model": "Classifier alone (Gradient boosting (class-weighted)) = PRIMARY",
+      "accuracy": 0.8024,
+      "macro_f1": 0.6861,
+      "weighted_f1": 0.7857,
+      "macro_precision": 0.8302,
+      "attack_precision": 0.9693,
+      "attack_detection": 0.7061,
+      "normal_fpr": 0.0296,
+      "unseen_detection": 0.3808,
+      "R2L_recall": 0.2787,
+      "U2R_recall": 0.3881,
+      "roc_auc": 0.9458,
+      "pr_auc": 0.955
+    },
+    {
+      "model": "Classifier + R2L/U2R second stage",
+      "accuracy": 0.8247,
+      "macro_f1": 0.7194,
+      "weighted_f1": 0.8175,
+      "macro_precision": 0.7872,
+      "attack_precision": 0.9699,
+      "attack_detection": 0.7605,
+      "normal_fpr": 0.0312,
+      "unseen_detection": 0.42,
+      "R2L_recall": 0.4572,
+      "U2R_recall": 0.4179,
+      "roc_auc": 0.9488,
+      "pr_auc": 0.9571
+    },
+    {
+      "model": "Optional high-recall mode, 2% budget",
+      "accuracy": 0.8219,
+      "macro_f1": 0.726,
+      "weighted_f1": 0.8319,
+      "macro_precision": 0.799,
+      "attack_precision": 0.967,
+      "attack_detection": 0.8318,
+      "normal_fpr": 0.0375,
+      "unseen_detection": 0.6475,
+      "R2L_recall": 0.4572,
+      "U2R_recall": 0.4179,
+      "roc_auc": 0.9627,
+      "pr_auc": 0.9572
+    },
+    {
+      "model": "Optional high-recall mode, 5% budget (= IDS_Final final)",
+      "accuracy": 0.8105,
+      "macro_f1": 0.7288,
+      "weighted_f1": 0.838,
+      "macro_precision": 0.8081,
+      "attack_precision": 0.9479,
+      "attack_detection": 0.8829,
+      "normal_fpr": 0.0642,
+      "unseen_detection": 0.7925,
+      "R2L_recall": 0.4572,
+      "U2R_recall": 0.4179,
+      "roc_auc": 0.9627,
+      "pr_auc": 0.9572
+    }
+  ],
+  "hmm": [
+    {
+      "setup": "IDS_Final: 5 symbols, 20-row windows",
+      "file_order_accuracy": 0.7229,
+      "shuffled_order_accuracy": 0.7229,
+      "emission_only_accuracy": 0.7229,
+      "mean_transition_row_L1_distance": 0.0438
+    },
+    {
+      "setup": "Repo: 20 symbols, 10-row windows",
+      "file_order_accuracy": 0.7082,
+      "shuffled_order_accuracy": 0.7082,
+      "emission_only_accuracy": 0.7082,
+      "mean_transition_row_L1_distance": 0.0457
+    }
+  ],
+  "hmm_simulated_control": [
+    {
+      "model": "HMM, ordered",
+      "accuracy": 0.8702
+    },
+    {
+      "model": "Emission only",
+      "accuracy": 0.7035
+    },
+    {
+      "model": "HMM, shuffled",
+      "accuracy": 0.641
+    }
+  ],
+  "hmm_evidence": {
+    "attack_lag1_autocorrelation_train_file_order": 0.00036,
+    "attack_lag1_autocorrelation_train_shuffled": -0.00066,
+    "attack_lag1_autocorrelation_test_file_order": -0.00819,
+    "attack_lag1_autocorrelation_test_shuffled": 0.00303,
+    "autocorrelation_noise_band_95": 0.00552,
+    "mutual_information_bits": [
+      {
+        "data": "KDDTrain+",
+        "MI(label_t; label_t-1) file order (bits)": 5e-05,
+        "MI(label_t; label_t-1) shuffled (bits)": 7e-05,
+        "MI(label_t; symbol_t) (bits)": 0.82523,
+        "attack lag-1 autocorrelation": 0.00036,
+        "attack lag-1 autocorrelation, shuffled": -0.00066
+      },
+      {
+        "data": "KDDTest+",
+        "MI(label_t; label_t-1) file order (bits)": 0.00025,
+        "MI(label_t; label_t-1) shuffled (bits)": 0.0004,
+        "MI(label_t; symbol_t) (bits)": 0.71071,
+        "attack lag-1 autocorrelation": -0.00819,
+        "attack lag-1 autocorrelation, shuffled": 0.00303
+      }
+    ],
+    "transition_file_vs_shuffled_max_abs_diff": 0.02726,
+    "transition_file_vs_shuffled_frobenius": 0.04246,
+    "transition_row_L1_to_stationary": {
+      "Normal": 0.0024,
+      "DoS": 0.0033,
+      "Probe": 0.0024,
+      "R2L": 0.0468,
+      "U2R": 0.0789
+    },
+    "loglik_per_step": {
+      "NSL-KDD test, file order": -1.3143,
+      "NSL-KDD test, shuffled": -1.3142,
+      "SIMULATED chain, ordered": -0.6643,
+      "SIMULATED chain, shuffled": -0.8758
+    },
+    "loglik_gain_from_order_nsl": -4e-05,
+    "loglik_gain_from_order_simulated": 0.21158,
+    "cases_accuracy_macro_f1": [
+      {
+        "setup": "NSL-KDD (IDS_Final: 5 symbols, 20-row)",
+        "case": "HMM, file order",
+        "accuracy": 0.7229,
+        "macro_f1": 0.4508
+      },
+      {
+        "setup": "NSL-KDD (IDS_Final: 5 symbols, 20-row)",
+        "case": "HMM, shuffled",
+        "accuracy": 0.7229,
+        "macro_f1": 0.4508
+      },
+      {
+        "setup": "NSL-KDD (IDS_Final: 5 symbols, 20-row)",
+        "case": "Emission only",
+        "accuracy": 0.7229,
+        "macro_f1": 0.4508
+      },
+      {
+        "setup": "NSL-KDD (Repo: 20 symbols, 10-row)",
+        "case": "HMM, file order",
+        "accuracy": 0.7082,
+        "macro_f1": 0.4397
+      },
+      {
+        "setup": "NSL-KDD (Repo: 20 symbols, 10-row)",
+        "case": "HMM, shuffled",
+        "accuracy": 0.7082,
+        "macro_f1": 0.4397
+      },
+      {
+        "setup": "NSL-KDD (Repo: 20 symbols, 10-row)",
+        "case": "Emission only",
+        "accuracy": 0.7082,
+        "macro_f1": 0.4397
+      },
+      {
+        "setup": "SIMULATED kill chain",
+        "case": "HMM, file order",
+        "accuracy": 0.8702,
+        "macro_f1": 0.7223
+      },
+      {
+        "setup": "SIMULATED kill chain",
+        "case": "HMM, shuffled",
+        "accuracy": 0.641,
+        "macro_f1": 0.2695
+      },
+      {
+        "setup": "SIMULATED kill chain",
+        "case": "Emission only",
+        "accuracy": 0.7035,
+        "macro_f1": 0.451
+      }
+    ]
+  },
+  "runtime_seconds": 432.6
+}

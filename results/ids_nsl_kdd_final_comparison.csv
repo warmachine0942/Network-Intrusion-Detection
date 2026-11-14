@@ -1,0 +1,7 @@
+model,accuracy,macro_f1,weighted_f1,macro_precision,attack_precision,attack_detection,normal_fpr,unseen_detection,R2L_recall,U2R_recall,roc_auc,pr_auc
+Repo: tuned RF + hierarchical RF,0.7968,0.5959,0.7617,0.8322,0.9688,0.6954,0.0296,0.472,0.1036,0.1642,0.9618,0.9654
+Repo: XGBoost multiclass,0.7802,0.5541,0.743,0.8168,0.9687,0.6603,0.0282,0.3675,0.086,0.1045,0.9686,0.9706
+Classifier alone (Gradient boosting (class-weighted)) = PRIMARY,0.8024,0.6861,0.7857,0.8302,0.9693,0.7061,0.0296,0.3808,0.2787,0.3881,0.9458,0.955
+Classifier + R2L/U2R second stage,0.8247,0.7194,0.8175,0.7872,0.9699,0.7605,0.0312,0.42,0.4572,0.4179,0.9488,0.9571
+"Optional high-recall mode, 2% budget",0.8219,0.726,0.8319,0.799,0.967,0.8318,0.0375,0.6475,0.4572,0.4179,0.9627,0.9572
+"Optional high-recall mode, 5% budget (= IDS_Final final)",0.8105,0.7288,0.838,0.8081,0.9479,0.8829,0.0642,0.7925,0.4572,0.4179,0.9627,0.9572

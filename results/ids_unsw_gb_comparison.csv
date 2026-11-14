@@ -1,0 +1,12 @@
+model,protocol,unit,role,roc_auc,average_precision,precision,recall,f1,normal_fpr,accuracy,balanced_accuracy,category_accuracy,category_balanced_accuracy,category_macro_f1,val_macro_f1,val_average_precision
+HMM,"held-out attacker hosts, shard 1 (4 folds)",20-flow window (category: per flow),sequence baseline (problem statement),0.988,0.6634,0.6178,0.9114,0.6983,0.0153,0.9839,0.9481,0.9639,0.2764,0.1775,0.1617,0.6405
+Independent-flow booster,"held-out attacker hosts, shard 1 (4 folds)",20-flow window (category: per flow),Task 6 comparison (uses TTL),0.9939,0.8803,0.7165,0.8192,0.6765,0.0125,0.9794,0.9033,,,,,
+"GB (a) per-flow, no TTL","held-out attacker hosts, shard 1 (4 folds)",20-flow window (category: per flow),primary classifier,0.9924,0.815,0.5726,0.8174,0.5718,0.0168,0.9742,0.9003,0.9684,0.4212,0.276,0.2977,0.8539
+"GB (b) per-flow + host history, no TTL","held-out attacker hosts, shard 1 (4 folds)",20-flow window (category: per flow),primary detector,0.9987,0.9361,0.802,0.9289,0.8545,0.0044,0.9924,0.9622,0.9801,0.4089,0.2661,0.2783,0.9369
+GB (c) per-flow with TTL (reference only),"held-out attacker hosts, shard 1 (4 folds)",20-flow window (category: per flow),reference only (TTL artefact),0.9944,0.8694,0.688,0.8108,0.6639,0.0128,0.9789,0.899,0.9684,0.4165,0.2729,0.2925,0.8936
+"Task 11 classifier (per-flow, no TTL)",train shard 1 → test shards 2-4,flow,first classifier (before),0.9979,0.9881,0.9,0.9992,0.947,0.0216,0.9818,0.9888,0.956,0.6285,0.4645,,
+"GB (a) per-flow, no TTL [primary classifier]",train shard 1 → test shards 2-4,flow,primary classifier,0.9988,0.9935,0.9049,0.9987,0.9495,0.0204,0.9827,0.9891,0.958,0.5784,0.4778,,
+"GB (b) per-flow + host history, no TTL [primary detector]",train shard 1 → test shards 2-4,flow,primary detector,0.9981,0.9898,0.9168,0.9922,0.9531,0.0175,0.9841,0.9874,0.9603,0.5784,0.4894,,
+"LIVE, no TTL (headline)",live replay of shards 2-4,host-minute,anomaly detector (Task 8 headline),0.9511,0.6148,0.6578,0.7614,0.7058,0.069,0.9059,0.8462,,,,,
+"LIVE, with TTL (testbed artefact)",live replay of shards 2-4,host-minute,"anomaly detector, TTL artefact",0.9947,0.9426,0.6858,1.0,0.8136,0.0798,0.9321,0.9601,,,,,
+"LIVE, gradient boosting (primary, supervised)",live replay of shards 2-4,host-minute,primary detector,0.9999,0.9995,0.9884,0.9989,0.9936,0.002,0.9981,0.9984,,,,,
