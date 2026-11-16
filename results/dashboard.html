@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f8">
+  <title>Network Intrusion Detection | Results</title>
+  <style>
+    :root{--bg:#f3f6f9;--panel:#fff;--line:#e0e6ed;--text:#182b3d;--muted:#68798a;--blue:#356d9c;--blue-light:#eaf2f8;--green:#43826b;--amber:#a2742b;--red:#a34d55}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}.shell{max-width:1440px;margin:auto;min-height:100vh;display:grid;grid-template-columns:218px minmax(0,1fr)}.sidebar{padding:25px 16px;border-right:1px solid var(--line);background:#fff;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:0}.brand{font-weight:650;white-space:nowrap;padding:0 10px 25px;font-size:14px}.brand-mark{display:none}.eyebrow{display:block;color:#8493a1;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin:0 10px 9px}.nav{display:grid;gap:3px}.nav a{padding:9px 10px;color:#536577;font-size:13px;border-radius:5px}.nav a:hover,.nav a.active{color:#285c87;background:#edf4f9}.side-note{display:block;margin-top:auto;border-top:1px solid var(--line);padding:14px 8px 0;color:var(--muted);font-size:11px}.side-note b{display:block;color:var(--text);margin-bottom:5px}.main{padding:30px clamp(22px,3vw,44px) 55px;max-width:1210px;width:100%;margin:auto}.topline{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px;color:var(--muted);font-size:11px}.status{color:var(--green);font-size:11px;background:#eaf4ef;border:1px solid #d8e9df;border-radius:20px;padding:4px 9px}.hero{margin-bottom:22px}.hero h1{font-size:29px;line-height:1.2;margin:0 0 7px;font-weight:620;letter-spacing:-.025em}.hero p{max-width:780px;color:var(--muted);margin:0;font-size:14px}.section{margin:32px 0 0;scroll-margin-top:20px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:12px}.section h2{font-size:19px;margin:0;font-weight:620;letter-spacing:-.01em}.section-head p{color:var(--muted);font-size:12px;margin:3px 0 0}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:7px;box-shadow:0 1px 2px rgba(20,42,62,.035)}.card{padding:15px 16px;border-top:2px solid #b7cad9}.card-label{font-size:11px;color:var(--muted);margin-bottom:6px}.card-value{font-size:25px;line-height:1.2;font-weight:650;color:#244f72}.card-sub{font-size:11px;color:var(--muted);margin-top:5px}.accent,.blue{color:var(--blue)}.amber{color:var(--amber)}.red{color:var(--red)}.panel{padding:16px;margin-top:12px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel-title{font-size:13px;font-weight:620;margin:0 0 4px}.panel-copy{font-size:11px;color:var(--muted);margin:0 0 12px}.bar-list{display:grid;gap:10px}.bar-row{display:grid;grid-template-columns:minmax(130px,1fr) 2fr 42px;gap:9px;align-items:center;font-size:11px;color:var(--text)}.track{height:7px;background:#e8edf2;border-radius:5px;overflow:hidden}.fill{height:100%;background:#4d83ad;border-radius:5px}.fill.bluefill{background:#8aa8c0}.fill.amberfill{background:#b3945d}.table-wrap{overflow-x:auto}.table{width:100%;border-collapse:collapse;font-size:11px;white-space:nowrap}.table th{text-align:right;color:#718294;font-size:9px;text-transform:uppercase;letter-spacing:.045em;padding:9px;border-bottom:1px solid var(--line)}.table th:first-child,.table td:first-child{text-align:left}.table td{text-align:right;padding:10px 9px;border-bottom:1px solid #edf0f3;color:#304256}.table tr:last-child td{border-bottom:0}.table tr.highlight td{background:#edf4f8;color:#214e71;font-weight:600}.table tr.highlight td:first-child{border-radius:4px 0 0 4px}.table tr.highlight td:last-child{border-radius:0 4px 4px 0}.tag{display:inline-block;border:1px solid #c4d5e2;color:#345f80;background:#f7fafc;border-radius:3px;padding:1px 5px;font-size:9px;margin-left:4px}.callout{border-left:3px solid #88a8c0;padding:10px 12px;background:#edf3f7;color:#485b6e;font-size:11px;margin-top:11px}.callout strong{color:#274c68}.figures{display:grid;grid-template-columns:1fr 1fr;gap:12px}.figure{padding:10px}.figure img{width:100%;height:auto;display:block;background:#fff}.figure figcaption{font-size:11px;color:var(--muted);padding:8px 2px 1px}.finding-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.finding{padding:14px;border-top:2px solid #b7cad9}.finding .num{font-size:9px;color:var(--blue);font-weight:650;letter-spacing:.06em}.finding h3{font-size:13px;margin:5px 0}.finding p{font-size:11px;color:var(--muted);margin:0}.footer{margin-top:35px;padding-top:13px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.mono{font-variant-numeric:tabular-nums}.subnav{font-size:11px;color:var(--blue)}
+    @media(max-width:850px){.shell{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:12px 18px}.brand{padding:0 5px 9px}.eyebrow,.side-note{display:none}.nav{display:flex;overflow:auto}.nav a{white-space:nowrap;padding:7px 10px}.main{padding-top:23px}.cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.grid2,.figures,.finding-list{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.topline{align-items:start}.cards{gap:8px}.card{padding:12px}.card-value{font-size:22px}.main{padding-left:14px;padding-right:14px}.bar-row{grid-template-columns:105px 1fr 35px;gap:7px}.panel{padding:13px}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="#overview">Network Intrusion Detection</a>
+    <div class="eyebrow">Project results</div>
+    <nav class="nav" aria-label="Dashboard sections">
+      <a class="active" href="#overview">Overview</a><a href="#unsw">UNSW-NB15</a><a href="#nsl">NSL-KDD</a><a href="#sequence">Sequence analysis</a><a href="#findings">Key findings</a>
+    </nav>
+    <div class="side-note"><b>Evaluation snapshot</b>Held-out host results and dataset experiments from the project report. Metrics depend on the evaluation setup shown in each section.</div>
+  </aside>
+  <main class="main">
+    <div class="topline"><span>PROJECT / MODEL EVALUATION</span><span class="status">Results summary</span></div>
+    <header class="hero" id="overview"><h1>Model evaluation results</h1><p>Summary of the intrusion detection experiments on UNSW-NB15 and NSL-KDD. The figures below cover held-out host performance, replay results, and sequence-model comparisons.</p></header>
+    <section class="cards" aria-label="Headline metrics">
+      <article class="card"><div class="card-label">UNSW held-out ROC AUC</div><div class="card-value accent mono">0.9987</div><div class="card-sub">GB + host history · no TTL</div></article>
+      <article class="card"><div class="card-label">UNSW held-out recall</div><div class="card-value blue mono">92.9%</div><div class="card-sub">At the evaluated operating point</div></article>
+      <article class="card"><div class="card-label">Live replay false alerts</div><div class="card-value amber mono">1.68<span style="font-size:15px"> / hr</span></div><div class="card-sub">Supervised GB detector · no TTL</div></article>
+      <article class="card"><div class="card-label">NSL-KDD best attack detection</div><div class="card-value red mono">88.3%</div><div class="card-sub">High-recall mode · 6.42% normal FPR</div></article>
+    </section>
+
+    <section class="section" id="unsw">
+      <div class="section-head"><div><h2>UNSW-NB15 · held-out hosts</h2><p>Primary comparison on unseen hosts, with TTL excluded from the selected model.</p></div><span class="subnav">Gradient boosting detector</span></div>
+      <div class="grid2">
+        <div class="panel"><h3 class="panel-title">Detection quality</h3><p class="panel-copy">Positive class: attack. Values are from held-out hosts.</p><div class="bar-list">
+          <div class="bar-row"><span>ROC AUC</span><div class="track"><div class="fill" style="width:99.87%"></div></div><b class="mono">.9987</b></div>
+          <div class="bar-row"><span>Average precision</span><div class="track"><div class="fill" style="width:93.61%"></div></div><b class="mono">.9361</b></div>
+          <div class="bar-row"><span>Recall</span><div class="track"><div class="fill bluefill" style="width:92.89%"></div></div><b class="mono">92.9%</b></div>
+          <div class="bar-row"><span>Precision</span><div class="track"><div class="fill bluefill" style="width:80.2%"></div></div><b class="mono">80.2%</b></div>
+          <div class="bar-row"><span>Normal FPR</span><div class="track"><div class="fill amberfill" style="width:4.4%"></div></div><b class="mono">0.44%</b></div>
+        </div></div>
+        <div class="panel"><h3 class="panel-title">Operational replay</h3><p class="panel-copy">Gradient boosting primary detector · host-minute replay, no TTL.</p><div class="cards" style="grid-template-columns:1fr 1fr">
+          <div><div class="card-label">Attack recall</div><div class="card-value accent mono">99.9%</div></div><div><div class="card-label">Precision</div><div class="card-value blue mono">98.8%</div></div>
+          <div><div class="card-label">False alert rate</div><div class="card-value mono" style="font-size:21px">0.204%</div></div><div><div class="card-label">False alerts / hour</div><div class="card-value amber mono" style="font-size:21px">1.68</div></div>
+        </div><p class="panel-copy" style="margin:15px 0 0">Replay covers 18,456 host-minutes, including 2,737 attack-minutes. Median alert latency: 25 seconds; 90th percentile: 56 seconds.</p></div>
+      </div>
+      <div class="panel"><h3 class="panel-title">Held-out model comparison</h3><p class="panel-copy">Higher recall comes with tradeoffs; the selected host-history model has the best balanced performance here.</p><div class="table-wrap"><table class="table"><thead><tr><th>Model</th><th>ROC AUC</th><th>Avg precision</th><th>Precision</th><th>Recall</th><th>F1</th><th>Normal FPR</th></tr></thead><tbody>
+        <tr><td>HMM</td><td>.9880</td><td>.6634</td><td>61.8%</td><td>91.1%</td><td>.698</td><td>1.53%</td></tr>
+        <tr><td>GB per-flow, no TTL</td><td>.9924</td><td>.8150</td><td>57.3%</td><td>81.7%</td><td>.572</td><td>1.68%</td></tr>
+        <tr class="highlight"><td>GB + host history, no TTL <span class="tag">SELECTED</span></td><td>.9987</td><td>.9361</td><td>80.2%</td><td>92.9%</td><td>.855</td><td>0.44%</td></tr>
+        <tr><td>GB per-flow with TTL <span class="tag" style="color:var(--amber);border-color:#574527;background:#261e12">REFERENCE</span></td><td>.9944</td><td>.8694</td><td>68.8%</td><td>81.1%</td><td>.664</td><td>1.28%</td></tr>
+      </tbody></table></div></div>
+      <div class="callout"><strong>Interpretation:</strong> Host history improved held-out detection substantially in this split. TTL-based results are shown only as a reference because TTL was treated as a testbed artefact.</div>
+      <div class="figures" style="margin-top:13px">
+        <figure class="panel figure"><img src="ids_unsw_gb_vs_hmm.png" alt="UNSW gradient boosting compared with HMM results"><figcaption>UNSW: supervised gradient boosting and HMM comparison.</figcaption></figure>
+        <figure class="panel figure"><img src="ids_unsw_live_timeline.png" alt="Live replay alert timeline"><figcaption>Live replay: alert scores across the evaluation timeline.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section" id="nsl">
+      <div class="section-head"><div><h2>NSL-KDD · classifier results</h2><p>Test-set summary. The high-recall operating mode catches more attacks at the cost of more false alarms.</p></div></div>
+      <div class="cards" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+        <article class="card"><div class="card-label">High-recall accuracy</div><div class="card-value mono">81.1%</div><div class="card-sub">5% alert-budget configuration</div></article>
+        <article class="card"><div class="card-label">Attack detection</div><div class="card-value accent mono">88.3%</div><div class="card-sub">Recall over attack traffic</div></article>
+        <article class="card"><div class="card-label">Attack precision</div><div class="card-value blue mono">94.8%</div><div class="card-sub">Among predicted attacks</div></article>
+        <article class="card"><div class="card-label">Normal false positive rate</div><div class="card-value amber mono">6.42%</div><div class="card-sub">Higher than standard mode</div></article>
+      </div>
+      <div class="panel"><h3 class="panel-title">Operating point comparison</h3><p class="panel-copy">Classifier + second stage balances attack detection and false alarms; optional high-recall modes trade more false positives for coverage.</p><div class="table-wrap"><table class="table"><thead><tr><th>Mode</th><th>Accuracy</th><th>Macro F1</th><th>Attack precision</th><th>Attack detection</th><th>Normal FPR</th><th>Unseen detection</th></tr></thead><tbody>
+        <tr><td>Classifier alone</td><td>80.24%</td><td>.6861</td><td>96.93%</td><td>70.61%</td><td>2.96%</td><td>38.08%</td></tr>
+        <tr class="highlight"><td>Classifier + R2L/U2R stage <span class="tag">BALANCED</span></td><td>82.47%</td><td>.7194</td><td>96.99%</td><td>76.05%</td><td>3.12%</td><td>42.00%</td></tr>
+        <tr><td>High recall · 2% budget</td><td>82.19%</td><td>.7260</td><td>96.70%</td><td>83.18%</td><td>3.75%</td><td>64.75%</td></tr>
+        <tr><td>High recall · 5% budget</td><td>81.05%</td><td>.7288</td><td>94.79%</td><td>88.29%</td><td>6.42%</td><td>79.25%</td></tr>
+      </tbody></table></div></div>
+      <div class="figures">
+        <figure class="panel figure"><img src="ids_nsl_kdd_accuracy_vs_false_alarms.png" alt="Accuracy and false alarm rate across NSL-KDD models"><figcaption>Accuracy versus false alarms for candidate operating points.</figcaption></figure>
+        <figure class="panel figure"><img src="ids_nsl_kdd_roc_pr_primary.png" alt="ROC and precision-recall curves for NSL-KDD primary model"><figcaption>ROC and precision-recall curves for the NSL-KDD primary detector.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section" id="sequence">
+      <div class="section-head"><div><h2>Does sequence order help?</h2><p>HMM transition modeling was tested against shuffled order and emission-only baselines.</p></div></div>
+      <div class="grid2">
+        <div class="panel"><h3 class="panel-title">NSL-KDD: no measured sequence gain</h3><p class="panel-copy">For both evaluated HMM setups, file-order, shuffled, and emission-only accuracy were identical to four decimal places.</p><div class="bar-list">
+          <div class="bar-row"><span>5 symbols · file order</span><div class="track"><div class="fill bluefill" style="width:72.29%"></div></div><b>.7229</b></div>
+          <div class="bar-row"><span>5 symbols · shuffled</span><div class="track"><div class="fill amberfill" style="width:72.29%"></div></div><b>.7229</b></div>
+          <div class="bar-row"><span>20 symbols · file order</span><div class="track"><div class="fill bluefill" style="width:70.82%"></div></div><b>.7082</b></div>
+        </div><div class="callout"><strong>Data limitation:</strong> NSL-KDD label order has almost no lag-1 dependence in these measurements. The HMM’s observed performance is effectively emission-driven.</div></div>
+        <div class="panel"><h3 class="panel-title">Simulated kill chain: sequence signal is detectable</h3><p class="panel-copy">A controlled sequence with meaningful temporal structure provides a useful positive control.</p><div class="bar-list">
+          <div class="bar-row"><span>Ordered HMM</span><div class="track"><div class="fill" style="width:87.02%"></div></div><b>.8702</b></div>
+          <div class="bar-row"><span>Emission only</span><div class="track"><div class="fill bluefill" style="width:70.35%"></div></div><b>.7035</b></div>
+          <div class="bar-row"><span>Shuffled HMM</span><div class="track"><div class="fill amberfill" style="width:64.10%"></div></div><b>.6410</b></div>
+        </div><p class="panel-copy" style="margin:15px 0 0">This supports the experiment’s ability to show sequence gains when the data actually contain a temporal signal.</p></div>
+      </div>
+      <div class="figures" style="margin-top:13px">
+        <figure class="panel figure"><img src="ids_nsl_kdd_hmm_cases.png" alt="HMM accuracy across ordered, shuffled and emission-only cases"><figcaption>HMM results across real and simulated sequence cases.</figcaption></figure>
+        <figure class="panel figure"><img src="ids_nsl_kdd_hmm_loglik_ordered_vs_shuffled.png" alt="HMM log likelihood comparison for ordered and shuffled sequences"><figcaption>Log likelihood: ordering adds signal in the simulated chain, not NSL-KDD.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section" id="findings">
+      <div class="section-head"><div><h2>What these results say</h2><p>Useful conclusions and limitations to carry into the project presentation.</p></div></div>
+      <div class="finding-list">
+        <article class="panel finding"><div class="num">01 / DETECTION</div><h3>Host context helps on UNSW</h3><p>Adding host history raised held-out average precision to .9361 and recall to 92.9%, while the normal false positive rate was 0.44%.</p></article>
+        <article class="panel finding"><div class="num">02 / SEQUENCES</div><h3>Temporal signal depends on the data</h3><p>Simulated kill-chain order improved accuracy, while NSL-KDD’s real row order showed no measurable gain over shuffled or emission-only baselines.</p></article>
+        <article class="panel finding"><div class="num">03 / GENERALIZATION</div><h3>Cross-dataset transfer is weak</h3><p>Reported attack recall fell to 6.3% for NSL-KDD → UNSW and 16.6% for UNSW → NSL-KDD. Strong in-domain scores do not imply cross-domain robustness.</p></article>
+      </div>
+      <div class="panel" style="margin-top:13px"><h3 class="panel-title">How to read the dashboard</h3><p class="panel-copy" style="margin:7px 0 0;line-height:1.7">Metrics come from distinct experiments and splits; compare models only within their stated evaluation setup. The live replay uses host-minute aggregation and its own selected threshold. The testbed TTL feature is flagged as an artefact and excluded from the primary result. This page summarizes results recorded in <code>results/ids_unsw_summary.json</code> and <code>results/ids_nsl_kdd_summary.json</code>.</p></div>
+    </section>
+    <footer class="footer"><span>Network Intrusion Detection · Experiment dashboard</span><span>Static page · no build step required</span></footer>
+  </main>
+</div>
+<script>
+  const links=[...document.querySelectorAll('.nav a')];
+  const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.hash==='#'+entry.target.id))}}),{rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(section=>observer.observe(section));
+</script>
+</body>
+</html>
